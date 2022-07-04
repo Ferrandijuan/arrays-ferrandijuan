@@ -1,8 +1,40 @@
 let opcion = 0;
 let flag = 0;
-let valor = 0;
 let producto;
-let devolucion;
+let gbmemoria;
+let precio = 0;
+let totalcompra= 0;
+
+function calculadoraDePrecios (modelo, memoria){
+  switch (modelo){
+    case "1": precio += 820;
+    break;
+
+    case "2": precio += 690;
+    break;
+
+    case "3": precio += 320;
+    break;
+
+    case "4": precio += 410;
+    break;
+
+    case "5": precio += 800;
+    break;
+    default:
+      return 0;
+      break;
+  }
+
+  if (memoria == "2") {
+    precio += 130
+
+
+}
+return precio;
+
+}
+
 do {
   do {
     producto = prompt(
@@ -15,40 +47,23 @@ do {
         "Agregado al carrito"
       );
       flag = 1;
-      if (producto == "1") {
-        valor = valor + 820
-      }
-      if (producto == "2") {
-        valor = valor + 690
-      }
-      if (producto == "3") {
-        valor = valor + 320
-      }
-      if (producto == "4") {
-        valor = valor + 410
-      }
-      if (producto == "5") {
-        valor = valor + 800
-      }
     } else {
       alert("Numero incorrecto");
     }
   } while (flag == 0);
   flag = 0;
   do {
-    devolucion = prompt(
+    gbmemoria = prompt(
       "De cuantos GB estaba buscando? \n 1)128GB \n 2)256GB(+130USD)"
     );
 
-    if (devolucion == "1" || devolucion == "2") {
+    if (gbmemoria == "1" || gbmemoria == "2") {
 
       alert(
         "agregado al carrito"
       )
       flag = 1;
-      if (devolucion == "2") {
-        valor = valor + 130
-      }
+
     } else {
       alert("Numero incorrecto");
     }
@@ -67,6 +82,8 @@ do {
 
 } while (opcion == 1);
 
-alert ("el total de su compra es: $"+valor)
+totalcompra = calculadoraDePrecios (producto, gbmemoria);
 
+
+alert ("el total de su compra es: $"+totalcompra);
 
