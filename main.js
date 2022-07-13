@@ -15,7 +15,7 @@ class celular{
 function AsignacionProducto (producto){
     switch (producto){
         case "1":
-            producto= "iPhone 12 Pro Max";
+            producto= "IPhone 12 Pro Max";
             break
         case "2":
             producto= "Samsung Galaxy S22";
@@ -137,3 +137,10 @@ do {
   }
 
 
+celulares.sort() //Ordenados por orden alfabetico
+  for (let i=0;i<celulares.length;i++){
+    console.log(celulares[i]);
+  }
+
+let telefonosDe256gb = celulares.filter(elemento => elemento.includes("256 GB"));
+  console.log(telefonosDe256gb);
