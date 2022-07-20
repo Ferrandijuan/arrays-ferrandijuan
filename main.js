@@ -24,8 +24,8 @@ function agregarCelular(e) {
     };
  
   
-    const existe = celularesCarrito.some((celular) => celular.id === infoCelulares.id);
-    if (existe) {
+    const elegir = celularesCarrito.some((celular) => celular.id === infoCelulares.id);
+    if (elegir) {
       const celulares = celularesCarrito.map((celular) => {
         if (celular.id === infoCelulares.id) {
           celular.cantidad++;
