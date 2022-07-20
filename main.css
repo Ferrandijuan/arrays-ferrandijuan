@@ -7,15 +7,10 @@ h5, h6  {
 }
 
 
-h1{
-    display: flex;
-    justify-content: center;
+h2{
+    text-align: center;
 }
 
-#enlace{
-    display: flex;
-    justify-content: center;
-}
 
 .centrado{
     display: flex;
@@ -34,31 +29,10 @@ h1{
     justify-content: center;
 }
 
-.img-cart{
-    width: 100%;
-}
-
-.agregar-carrito{
-    display: flex;
-    justify-content: center;    
-}
 
 .centrado-cart{
     display: flex;
     justify-content: center;
 }
 
-a{
-    text-decoration: none;
-    color: red;
-}
 
-
-.show{
-    display: flex;
-    justify-content: center;
-}
-
-#carrito{
-    width: 50%;
-}
