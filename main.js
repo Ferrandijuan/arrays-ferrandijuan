@@ -18,7 +18,6 @@ function agregarCelular(e) {
   function DatosCelulares(celular) {
     const infoCelulares = {
       imagen: celular.querySelector("img").src,
-      titulo: celular.querySelector(".card-title").innerText,
       precio: celular.querySelector("h6").innerText,
       id: celular.querySelector("a").getAttribute("id"),
       cantidad: 1,
