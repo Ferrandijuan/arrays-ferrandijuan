@@ -5,22 +5,6 @@ const listaTelefonos = document.querySelector("#lista-telefonos");
 let celularesCarrito = [];
 
 
-cargarEventListeners();
-
-function cargarEventListeners() {
-  listaTelefonos.addEventListener("click", agregarCelular);
-
-  carrito.addEventListener("click", eliminarCelular);
-
-
-
-  vaciarCarrito.addEventListener("click", () => {
-      celularesCarrito = [];
-
-    limpiarHTML();
-  });
-}
-
 
 function agregarCelular(e) {
     e.preventDefault();
@@ -90,3 +74,20 @@ function limpiarHTML() {
     contenedor.innerHTML = "";
   }
 
+
+
+cargarEventListeners();
+
+  function cargarEventListeners() {
+    listaTelefonos.addEventListener("click", agregarCelular);
+  
+    carrito.addEventListener("click", eliminarCelular);
+  
+  
+  
+    vaciarCarrito.addEventListener("click", () => {
+        celularesCarrito = [];
+  
+      limpiarHTML();
+    });
+  }
