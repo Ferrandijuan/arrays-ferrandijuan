@@ -39,6 +39,8 @@ function agregarCelular(e) {
     } else {
       celularesCarrito = [...celularesCarrito, infoCelulares];
     }
+
+    localstorageListacelulares(celularesCarrito);
     carritoHTML();
   }
 
@@ -55,6 +57,7 @@ function agregarCelular(e) {
       <a href="" class="borrar-celular" id="${celular.id}">x</a>
       </td>`;
       contenedor.appendChild(row);
+
     });
   }
 
@@ -64,6 +67,7 @@ function eliminarCelular(e) {
       const celularID = e.target.getAttribute("id");
 
       celularesCarrito = celularesCarrito.filter((celular) => celular.id !== celularID);
+
   
       carritoHTML();
     }
@@ -91,3 +95,19 @@ cargarEventListeners();
       limpiarHTML();
     });
   }
+
+
+function getCelularesList(){
+  let storedList = localStorage.getItem(`localcelularesCarrito`);
+  if (storedList == null){
+    celularesCarrito = [];
+    }else{
+      celularesCarrito = JSON.parse(storedList);
+  }
+  return celularesCarrito;
+}
+
+
+function localstorageListacelulares(plist) {
+  localStorage.setItem(`localcelularesCarrito`, JSON.stringify(plist));
+}
