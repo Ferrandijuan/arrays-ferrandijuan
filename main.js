@@ -40,6 +40,7 @@ function agregarCelular(e) {
       celularesCarrito = [...celularesCarrito, infoCelulares];
     }
 
+    console.log(celularesCarrito);
     localstorageListacelulares(celularesCarrito);
     carritoHTML();
   }
