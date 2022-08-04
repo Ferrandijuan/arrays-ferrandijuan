@@ -2,7 +2,13 @@ const carrito = document.querySelector("#carrito");
 const contenedor = document.querySelector("#contenedor");
 const vaciarCarrito = document.querySelector("#vaciar-carrito");
 const listaTelefonos = document.querySelector("#lista-telefonos");
+const toast = document.querySelector(".boton")
+const toast2 = document.querySelector(".boton2")
+const toast3 = document.querySelector(".boton3")
+const toast4 = document.querySelector(".boton4")
+const toast5 = document.querySelector(".boton5")
 let celularesCarrito = [];
+i = 0;
 
 
 
@@ -58,7 +64,6 @@ function agregarCelular(e) {
       <a href="" class="borrar-celular" id="${celular.id}">x</a>
       </td>`;
       contenedor.appendChild(row);
-
     });
   }
 
@@ -112,3 +117,69 @@ function getCelularesList(){
 function localstorageListacelulares(plist) {
   localStorage.setItem(`localcelularesCarrito`, JSON.stringify(plist));
 }
+
+
+
+toast.addEventListener("click", () => {
+
+  Toastify({
+    text: "Agregado al carrito",
+    className: "boton",
+    duration: 2000,
+    style: {
+      background: "linear-gradient(to right, #9b9b9b, #454545)",
+    }
+    }).showToast();
+})
+
+
+toast2.addEventListener("click", () => {
+
+  Toastify({
+    text: "Agregado al carrito",
+    className: "boton",
+    duration: 2000,
+    style: {
+      background: "linear-gradient(to right, #9b9b9b, #454545)",
+    }
+    }).showToast();
+})
+
+
+toast3.addEventListener("click", () => {
+
+  Toastify({
+    text: "Agregado al carrito",
+    className: "boton",
+    duration: 2000,
+    style: {
+      background: "linear-gradient(to right, #9b9b9b, #454545)",
+    }
+    }).showToast();
+})
+
+
+toast4.addEventListener("click", () => {
+
+  Toastify({
+    text: "Agregado al carrito",
+    className: "boton",
+    duration: 2000,
+    style: {
+      background: "linear-gradient(to right, #9b9b9b, #454545)",
+    }
+    }).showToast();
+})
+
+
+toast5.addEventListener("click", () => {
+
+  Toastify({
+    text: "Agregado al carrito",
+    className: "boton",
+    duration: 2000,
+    style: {
+      background: "linear-gradient(to right, #9b9b9b, #454545)",
+    }
+    }).showToast();
+})
