@@ -133,7 +133,7 @@ toast.addEventListener("click", () => {
 })
 
 
-toast2.addEventListener("click", () => {
+/toast2.addEventListener("click", () => {
 
   Toastify({
     text: "Agregado al carrito",
@@ -183,3 +183,7 @@ toast5.addEventListener("click", () => {
     }
     }).showToast();
 })
+
+fetch('https://v6.exchangerate-api.com/v6/419f8238815a53d6a3b7f683/latest/USD')
+  .then((response) => response.json())
+  .then((json) => console.log(json));
